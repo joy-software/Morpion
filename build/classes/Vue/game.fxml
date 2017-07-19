@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="jeu_acnchor" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vue.GameController">
+   <children>
+      <GridPane gridLinesVisible="true" layoutX="99.0" layoutY="105.0" prefHeight="300.0" prefWidth="323.0">
+         <children>
+            <Label onMouseClicked="#get00" prefHeight="97.0" prefWidth="107.0" />
+            <Label onMouseClicked="#get01" prefHeight="97.0" prefWidth="107.0" GridPane.columnIndex="1" />
+            <Label onMouseClicked="#get02" prefHeight="97.0" prefWidth="107.0" GridPane.columnIndex="2" />
+            <Label onMouseClicked="#get10" prefHeight="97.0" prefWidth="107.0" GridPane.rowIndex="1" />
+            <Label onMouseClicked="#grille_getNode" prefHeight="97.0" prefWidth="107.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label onMouseClicked="#grille_getNode" prefHeight="97.0" prefWidth="107.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label onMouseClicked="#get20" prefHeight="97.0" prefWidth="107.0" GridPane.rowIndex="2" />
+            <Label onMouseClicked="#grille_getNode" prefHeight="97.0" prefWidth="107.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label onMouseClicked="#grille_getNode" prefHeight="97.0" prefWidth="107.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<SplitPane fx:id="jeu_split" dividerPositions="0.5" prefHeight="500.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vue.GameController">
+   <items>
+      <AnchorPane fx:id="status" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <GridPane fx:id="grille_gridpane" alignment="CENTER" prefHeight="122.0" prefWidth="200.0" AnchorPane.bottomAnchor="388.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ToolBar fx:id="jeu" onMouseClicked="#handleJeu">
+                     <items>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Parametres du Jeu" textAlignment="CENTER">
+                           <font>
+                              <Font name="Berlin Sans FB" size="15.0" />
+                           </font>
+                        </Label>
+                     </items>
+                  </ToolBar>
+                  <ToolBar fx:id="partie" disable="true" onMouseClicked="#handlePartie" GridPane.rowIndex="2">
+                     <items>
+                        <Label alignment="CENTER" text="Nouvelle Partie" textAlignment="CENTER" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Berlin Sans FB" size="15.0" />
+                           </font>
+                        </Label>
+                     </items>
+                  </ToolBar>
+                  <ToolBar fx:id="reprendre" onMouseClicked="#handleReprendre" visible="false" GridPane.rowIndex="3">
+                     <items>
+                        <Label alignment="CENTER" text="Reprendre la partie" textAlignment="CENTER" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Berlin Sans FB" size="15.0" />
+                           </font>
+                        </Label>
+                     </items>
+                  </ToolBar>
+                  <ToolBar fx:id="changeNom" disable="true" onMouseClicked="#handleChangeNom" GridPane.rowIndex="1">
+                     <items>
+                        <Label alignment="CENTER" text="Changer le nom du joueur" textAlignment="CENTER" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Berlin Sans FB" size="15.0" />
+                           </font>
+                        </Label>
+                     </items>
+                  </ToolBar>
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+            <ToolBar fx:id="toolplayer1" layoutY="138.0" onMouseClicked="#handleJeu" prefHeight="27.0" prefWidth="200.0" visible="false">
+               <items>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Joueur 1:" textAlignment="CENTER" textFill="#a663e4">
+                     <font>
+                        <Font name="Berlin Sans FB" size="15.0" />
+                     </font>
+                  </Label>
+               </items>
+            </ToolBar>
+            <ToolBar fx:id="toolplayer2" layoutY="413.0" onMouseClicked="#handleJeu" prefHeight="27.0" prefWidth="200.0" visible="false">
+               <items>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Joueur 2:" textAlignment="CENTER" textFill="#a663e4">
+                     <font>
+                        <Font name="Berlin Sans FB" size="15.0" />
+                     </font>
+                  </Label>
+               </items>
+            </ToolBar>
+            <AnchorPane fx:id="playerLabel" layoutY="226.0">
+               <children>
+                  <Label prefHeight="160.0" prefWidth="200.0" text="à toi de Jouer" textFill="#1c43c3">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="jeu_acnchor" minHeight="-Infinity" prefHeight="510.0" prefWidth="520.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="54.0" layoutY="28.0" prefHeight="38.0" prefWidth="386.0" text="Welcome, You can be a Morpion or a Winner" textAlignment="CENTER" textFill="#2291c9" underline="true">
+               <font>
+                  <Font name="Berlin Sans FB" size="18.0" />
+               </font>
+            </Label>
+            <Label contentDisplay="CENTER" layoutX="14.0" layoutY="66.0" prefHeight="38.0" prefWidth="386.0" text="Choose a plan:">
+               <font>
+                  <Font name="Berlin Sans FB" size="15.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="jeu_machine" layoutX="194.0" layoutY="107.0" mnemonicParsing="false" onMouseClicked="#vsMachine" text="Human VS Machine" />
+            <RadioButton fx:id="jeu_human" layoutX="194.0" layoutY="212.0" mnemonicParsing="false" onMouseClicked="#vsHuman" text="Human VS Human" />
+            <Label fx:id="jeu_photo2" layoutX="332.0" layoutY="107.0" prefHeight="122.0" prefWidth="172.0" text="Label" />
+            <Label fx:id="jeu_photo1" layoutX="14.0" layoutY="107.0" prefHeight="122.0" prefWidth="172.0" text="Label" />
+            <Label contentDisplay="CENTER" layoutX="14.0" layoutY="286.0" prefHeight="38.0" prefWidth="386.0" text="Make a choice:">
+               <font>
+                  <Font name="Berlin Sans FB" size="15.0" />
+               </font>
+            </Label>
+            <VBox fx:id="jeu_vbox" layoutX="18.0" layoutY="373.0" spacing="16.0">
+               <children>
+                  <ChoiceBox fx:id="jeu_choice" prefHeight="25.0" prefWidth="164.0" />
+               </children>
+            </VBox>
+            <Label fx:id="jeu_photo3" layoutX="200.0" layoutY="267.0" prefHeight="175.0" prefWidth="241.0" text="Label" />
+         </children>
+      </AnchorPane>
+   </items>
+</SplitPane>

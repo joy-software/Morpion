@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Label fx:id="playerLabel" prefHeight="160.0" prefWidth="200.0" text="Configurez vos paramètres avant de pouvoir jouer" textFill="#1c43c3" wrapText="true" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vue.LabelController">
+   <font>
+      <Font name="Berlin Sans FB Demi Bold" size="13.0" />
+   </font>
+</Label>
